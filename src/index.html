@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>布魯斯TailwindCSS教學</title>
-  </head>
-  <body class="bg-[#E5E5E5]">
-    <div class="p-4 h-screen lg:p-8 text-primary">
-      TailwindCSS
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TailwindCSS教學</title>
+</head>
+
+<body class="relative lg:h-screen dark:bg-[#5556ab]">
+  <div class="p-4 lg:p-8">
+    <!-- header -->
+    <div class="flex justify-between items-start lg:max-w-[1280px] lg:mx-auto">
+      <div>
+        <h1 class="text-4xl text-gray-800 tracking-wide"> Start Now</h1>
+        <p class="text-4xl text-gray-800 tracking-wide">your
+          <span class="font-bold text-black">free plan.</span>
+        </p>
+      </div>
+      <button id="login"
+              class="bg-primary text-white py-2 px-4 rounded-sm tracking-widest active:bg-primary-dark active:ring-4 duration-100  ring-primary ring-opacity-50 ring-offset-2">LOGIN</button>
     </div>
-  </body>
+    <!-- main -->
+    <div class="
+      mt-8
+      lg:grid
+      lg:grid-cols-3
+     
+      lg:gap-8
+      lg:max-w-[1280px]
+      lg:mx-auto
+    ">
+      <!-- card 1-->
+      <div class="w-full p-8 mt-8 bg-secondary rounded-2xl shadow-2xl hover:scale-105 duration-300">
+        <p class="text-3xl font-bold">Free $0
+          <span class="text-base text-gary-600 font-medium">per month</span>
+        </p>
+        <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
+
+        <p class="font-bold mt-8 text-lg">Plan includes：</p>
+        <ul id="list1" class="text-lg mb-20">
+          <!-- <li class="flex items-center mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-primary mr-4" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+            item bla bla bla bla
+          </li> -->
+
+        </ul>
+
+        <a href="#" class="w-full text-center block mb-8 font-bold">view all the features</a>
+        <button class="w-full bg-primary py-3 text-white font-bold tracking-wide rounded-lg text-lg">
+          Subscribe
+        </button>
+      </div>
+      <!-- card 2-->
+      <div class="w-full p-8 mt-8 bg-primary rounded-2xl shadow-2xl hover:scale-105 duration-300">
+        <p class="text-3xl font-bold text-white">Standard $20
+          <span class="text-base font-medium">per month</span>
+        </p>
+        <div class="w-[30px] h-[3px] bg-white mt-4"></div>
+
+        <p class="font-bold mt-8 text-lg text-white">Plan includes：</p>
+        <ul id="list2" class="text-lg mb-20 text-white">
+        </ul>
+
+        <a href="#" class="w-full text-center block mb-8 font-bold text-white">view all the features</a>
+        <button class="w-full bg-white py-3 text-black font-bold tracking-wide rounded-lg text-lg">
+          Subscribe
+        </button>
+      </div>
+      <!-- card 3-->
+      <div class="w-full p-8 mt-8 bg-secondary rounded-2xl shadow-2xl hover:scale-105 duration-300">
+        <p class="text-3xl font-bold">Pro $90
+          <span class="text-base text-gary-600 font-medium">per month</span>
+        </p>
+        <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
+
+        <p class="font-bold mt-8 text-lg">Plan includes：</p>
+        <ul id="list3" class="text-lg mb-20">
+        </ul>
+
+        <a href="#" class="w-full text-center block mb-8 font-bold">view all the features</a>
+        <button class="w-full bg-primary py-3 text-white font-bold tracking-wide rounded-lg text-lg">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modal -->
+  <div id="modal"
+       class="absolute top-0 left-0 right-0 w-full h-full flex items-start justify-center bg-black/70 opacity-0 pointer-events-none duration-300 lg:items-center
+       ">
+    <div class="w-[90%] p-4 bg-white mt-[150px] rounded-lg lg:mt-0 lg:w-[640px]">
+      <p class="text-3xl my-4 font-bold text-center">LOGIN</p>
+      <div class="mb-8">
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username" class="w-full border-gray-300 border-2 h-[50px] px-3 mt-1 rounded-lg
+        focus:border-primary focus:ring-primary
+        ">
+      </div>
+      <div class="mb-8">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" class="w-full border-gray-300 border-2 h-[50px] px-3 mt-1 rounded-lg
+        focus:border-primary focus:ring-primary
+        ">
+      </div>
+      <div class="mb-8">
+        <label for="region">Username</label>
+        <select type="text" name="region" class="w-full border-gray-300 border-2 h-[50px] px-3 mt-1 rounded-lg
+        focus:border-primary focus:ring-primary">
+          <option value="TW">Taiwan</option>
+          <option value="SG">Singapore</option>
+        </select>
+      </div>
+      <div class="mb-8 flex items-center">
+        <input id="checkbox" type="checkbox" name="checkbox" class="
+        mr-2 text-primary focus:ring-primary
+        ">
+        <label for="checkbox">Remember my username</label>
+      </div>
+      <button id="close" class="w-full bg-primary py-3 text-lg text-white tracking-wide rounded-lg mt-4">關閉</button>
+    </div>
+  </div>
+
+
+  
+
+</body>
+
 </html>

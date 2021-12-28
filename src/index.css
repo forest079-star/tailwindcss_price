@@ -5,3 +5,9 @@
 html{
   /* font-size: 12px; */
 }
+
+@layer base {
+  body {
+    @apply m-5 bg-[#E5E5E5];
+  }
+}
